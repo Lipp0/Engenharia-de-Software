@@ -1,0 +1,31 @@
+Algoritmo "Calculadora de Consumo de Água"
+
+Var
+        apt, contador: inteiro
+	consumo, m_consumo: real
+Inicio
+
+	contador <- 1
+
+        Escreva("Bem vindo(a) a Calculadora de Consumo de Água! Digite a quantidade de apartamentos: ")
+	Leia(contador)
+
+	Repita
+		Escreva("Insira o consumo em litros: ")
+		Leia(consumo)
+		Se (consumo > 0) e (m_consumo < consumo) então
+			m_consumo <- consumo
+			apt <- contador
+
+                Fim_se
+      
+         contador <- contador -1
+	 Até_que (consumo = -1) ou (contador = 0)
+
+         Se (m_consumo > 0) então
+         Escreva("O apartamento de n°",apt," teve o maior consumo, sendo de ",m_consumo/1000,"m³ de água.")
+
+	Fim_se
+
+
+Fim
