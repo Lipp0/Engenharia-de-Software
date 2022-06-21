@@ -1,0 +1,57 @@
+Algoritmo "Abastecimento de Avião"
+
+procedimento dados()
+
+   Inicio
+
+      Escreva ("Digite o consumo médio do avião em litros:")
+      Leia(mediaAeronave)
+      Escreva ("Digite a capacidade máxima do tanque em litros:")
+      Leia(capaciMaxima)
+      Escreva ("Digite a distância do trecho planejado em quilômetros:")
+      Leia(tPlanejado)
+      Escreva ("Digite a ditância do trecho alternativo em quilômetros:")
+      Leia(tAlternativo)
+      Escreva ("Digite a quantidade de combustível já no avião:")
+      Leia(combusInicial)
+
+Fim_procedimento
+
+
+procedimento calcular()
+
+   Inicio
+
+      trechoTotal <- tPlanejado + tAlternativo
+      trechoTotal <- trechoTotal * 1.3
+      combustivelTotal <- trechoTotal * mediaAviao
+      comporta <- combustivelTotal - capMaxima
+      abast <- combTotal  - combInicial
+
+Fim_procedimento
+
+Var
+
+   mediaAviao, capMaxima, tPlanejado, tAlternativo, combInicial : real
+   trechoTotal,  combTotal, abast, comporta : real
+
+Inicio
+
+   dados()
+
+   calcular()
+
+
+   Se  ( trechoTotal > capMaxima)  então
+      Escreva(“Voo Reprovado, refaça o planejamento do voo.”)
+   Senão
+      Escreval("Voo Aprovado, bom voo!")
+      Escreval("Trecho principal:", tPlanejado)
+      Escreval("Trecho alternativo:", tAlternativo)
+      Escreval("Total do trecho com a margem de segurança:", trechoTotal)
+      Escreval("Quantidade de combustível necessária para o trecho:", combTotal)
+      Escreval("Quantidade necessária de abastecimento:", abast)
+
+   Fim_se
+
+Fim_algoritmo
