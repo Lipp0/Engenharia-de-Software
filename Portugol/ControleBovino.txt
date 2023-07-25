@@ -1,0 +1,35 @@
+Algoritmo "Controle Bovino"
+
+Var
+  boi, par, impar: vetor[1..42] de inteiro
+  num_boi, qtd_boi, qtd_par, qtd_impar: inteiro
+Inicio
+  qtd_par <-1
+  qtd_impar <-1
+  
+  para qtd_boi de 1 ate 42 passo 1 faça
+       Escreva("Informe a marcação do gado para cadastro n°", qtd_boi,": ")
+       Leia(num_boi)
+       
+       Se (num_boi mod 2 = 0)então
+           par [qtd_par] <- num_boi
+           qtd_par <- qtd_par + 1
+       Senão
+           impar [qtd_impar] <- num_boi
+           qtd_impar <- qtd_impar + 1
+       fimse
+  fimpara
+       
+  Escreval("Pasto 1 (par): ")
+  para qtd_boi de 1 ate (qtd_par - 1) passo 1 faça
+       Escreval("Gado n°", par[qtd_boi])
+
+       fimpara
+
+  Escreval("Pasto 2 (impar): ")
+  para qtd_boi de 1 ate (qtd_impar - 1) passo 1 faça
+       Escreval("Gado n°", impar[qtd_boi])
+
+       fimpara
+
+Fimalgoritmo
